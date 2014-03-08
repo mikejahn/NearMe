@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3C2EBF0DD5490CB028D2D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34EAA7791B44F45BE8DFD94 /* libPods.a */; };
 		F12741F318BA8E1F007B9A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F218BA8E1F007B9A65 /* Foundation.framework */; };
 		F12741F518BA8E1F007B9A65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F418BA8E1F007B9A65 /* CoreGraphics.framework */; };
 		F12741F718BA8E1F007B9A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F618BA8E1F007B9A65 /* UIKit.framework */; };
@@ -21,6 +22,21 @@
 		F127421418BA8E1F007B9A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F618BA8E1F007B9A65 /* UIKit.framework */; };
 		F127421C18BA8E1F007B9A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F127421A18BA8E1F007B9A65 /* InfoPlist.strings */; };
 		F127421E18BA8E1F007B9A65 /* NearMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F127421D18BA8E1F007B9A65 /* NearMeTests.m */; };
+		F127422A18BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F127422918BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m */; };
+		F127422D18BA9090007B9A65 /* NMBusinessListViewTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F127422C18BA9090007B9A65 /* NMBusinessListViewTableCell.m */; };
+		F127423618BA9448007B9A65 /* NMBusinessDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423518BA9448007B9A65 /* NMBusinessDetailView.m */; };
+		F127423A18BA98D1007B9A65 /* NMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423918BA98D1007B9A65 /* NMMapView.m */; };
+		F127423C18BA99AD007B9A65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F127423B18BA99AD007B9A65 /* MapKit.framework */; };
+		F127424018BA9DC7007B9A65 /* NMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423F18BA9DC7007B9A65 /* NMAPIClient.m */; };
+		F127424518BA9E11007B9A65 /* NMMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424418BA9E11007B9A65 /* NMMappingProvider.m */; };
+		F127424818BA9F53007B9A65 /* NMBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424718BA9F53007B9A65 /* NMBusiness.m */; };
+		F127424B18BAA478007B9A65 /* NMBusinessReviewSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424A18BAA478007B9A65 /* NMBusinessReviewSearch.m */; };
+		F127424E18BAAF20007B9A65 /* NMBusinessLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */; };
+		F127425218BABF45007B9A65 /* NMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F127425118BABF45007B9A65 /* NMLocationManager.m */; };
+		F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F168262318C6C29A00E11BD5 /* NMCategory.m */; };
+		F168262A18C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */; };
+		F168262C18C6C9BC00E11BD5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */; };
+		F168262E18C6CA9100E11BD5 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262D18C6CA9100E11BD5 /* OpenSans-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C34EAA7791B44F45BE8DFD94 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12741EF18BA8E1F007B9A65 /* NearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12741F218BA8E1F007B9A65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F12741F418BA8E1F007B9A65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +71,32 @@
 		F127421918BA8E1F007B9A65 /* NearMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NearMeTests-Info.plist"; sourceTree = "<group>"; };
 		F127421B18BA8E1F007B9A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F127421D18BA8E1F007B9A65 /* NearMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearMeTests.m; sourceTree = "<group>"; };
+		F127422818BA8E65007B9A65 /* NMBusinessListTabelViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessListTabelViewViewController.h; sourceTree = "<group>"; };
+		F127422918BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessListTabelViewViewController.m; sourceTree = "<group>"; };
+		F127422B18BA9090007B9A65 /* NMBusinessListViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessListViewTableCell.h; sourceTree = "<group>"; };
+		F127422C18BA9090007B9A65 /* NMBusinessListViewTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessListViewTableCell.m; sourceTree = "<group>"; };
+		F127423418BA9448007B9A65 /* NMBusinessDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessDetailView.h; sourceTree = "<group>"; };
+		F127423518BA9448007B9A65 /* NMBusinessDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessDetailView.m; sourceTree = "<group>"; };
+		F127423818BA98D1007B9A65 /* NMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMapView.h; sourceTree = "<group>"; };
+		F127423918BA98D1007B9A65 /* NMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMapView.m; sourceTree = "<group>"; };
+		F127423B18BA99AD007B9A65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F127423E18BA9DC7007B9A65 /* NMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAPIClient.h; sourceTree = "<group>"; };
+		F127423F18BA9DC7007B9A65 /* NMAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAPIClient.m; sourceTree = "<group>"; };
+		F127424318BA9E11007B9A65 /* NMMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMappingProvider.h; sourceTree = "<group>"; };
+		F127424418BA9E11007B9A65 /* NMMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMappingProvider.m; sourceTree = "<group>"; };
+		F127424618BA9F53007B9A65 /* NMBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusiness.h; sourceTree = "<group>"; };
+		F127424718BA9F53007B9A65 /* NMBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusiness.m; sourceTree = "<group>"; };
+		F127424918BAA478007B9A65 /* NMBusinessReviewSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessReviewSearch.h; sourceTree = "<group>"; };
+		F127424A18BAA478007B9A65 /* NMBusinessReviewSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessReviewSearch.m; sourceTree = "<group>"; };
+		F127424C18BAAF20007B9A65 /* NMBusinessLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessLocation.h; sourceTree = "<group>"; };
+		F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessLocation.m; sourceTree = "<group>"; };
+		F127425018BABF45007B9A65 /* NMLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLocationManager.h; sourceTree = "<group>"; };
+		F127425118BABF45007B9A65 /* NMLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMLocationManager.m; sourceTree = "<group>"; };
+		F168262218C6C29A00E11BD5 /* NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCategory.h; sourceTree = "<group>"; };
+		F168262318C6C29A00E11BD5 /* NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCategory.m; sourceTree = "<group>"; };
+		F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F168262D18C6CA9100E11BD5 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +104,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F127423C18BA99AD007B9A65 /* MapKit.framework in Frameworks */,
 				F12741F518BA8E1F007B9A65 /* CoreGraphics.framework in Frameworks */,
 				F12741F718BA8E1F007B9A65 /* UIKit.framework in Frameworks */,
 				F12741F318BA8E1F007B9A65 /* Foundation.framework in Frameworks */,
+				DA3C2EBF0DD5490CB028D2D7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +132,7 @@
 				F127421718BA8E1F007B9A65 /* NearMeTests */,
 				F12741F118BA8E1F007B9A65 /* Frameworks */,
 				F12741F018BA8E1F007B9A65 /* Products */,
+				9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +148,12 @@
 		F12741F118BA8E1F007B9A65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F127423B18BA99AD007B9A65 /* MapKit.framework */,
 				F12741F218BA8E1F007B9A65 /* Foundation.framework */,
 				F12741F418BA8E1F007B9A65 /* CoreGraphics.framework */,
 				F12741F618BA8E1F007B9A65 /* UIKit.framework */,
 				F127421118BA8E1F007B9A65 /* XCTest.framework */,
+				C34EAA7791B44F45BE8DFD94 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +161,12 @@
 		F12741F818BA8E1F007B9A65 /* NearMe */ = {
 			isa = PBXGroup;
 			children = (
+				F168262518C6C88500E11BD5 /* Resources */,
+				F127424F18BABF32007B9A65 /* Location Manager */,
+				F127423D18BA9DAC007B9A65 /* API Client */,
+				F127423718BA98C0007B9A65 /* Map View */,
+				F127423318BA942E007B9A65 /* Detail View */,
+				F127422718BA8E3F007B9A65 /* BusinessList Table View */,
 				F127420118BA8E1F007B9A65 /* NMAppDelegate.h */,
 				F127420218BA8E1F007B9A65 /* NMAppDelegate.m */,
 				F127420418BA8E1F007B9A65 /* Main.storyboard */,
@@ -152,6 +207,105 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F127422718BA8E3F007B9A65 /* BusinessList Table View */ = {
+			isa = PBXGroup;
+			children = (
+				F127422E18BA90FA007B9A65 /* Table View Cell */,
+				F127422818BA8E65007B9A65 /* NMBusinessListTabelViewViewController.h */,
+				F127422918BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m */,
+			);
+			name = "BusinessList Table View";
+			sourceTree = "<group>";
+		};
+		F127422E18BA90FA007B9A65 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F127422B18BA9090007B9A65 /* NMBusinessListViewTableCell.h */,
+				F127422C18BA9090007B9A65 /* NMBusinessListViewTableCell.m */,
+			);
+			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		F127423318BA942E007B9A65 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				F127423418BA9448007B9A65 /* NMBusinessDetailView.h */,
+				F127423518BA9448007B9A65 /* NMBusinessDetailView.m */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		F127423718BA98C0007B9A65 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				F127423818BA98D1007B9A65 /* NMMapView.h */,
+				F127423918BA98D1007B9A65 /* NMMapView.m */,
+				F127424C18BAAF20007B9A65 /* NMBusinessLocation.h */,
+				F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */,
+			);
+			name = "Map View";
+			sourceTree = "<group>";
+		};
+		F127423D18BA9DAC007B9A65 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				F127424218BA9DD1007B9A65 /* Models */,
+				F127424118BA9DCC007B9A65 /* Mappings */,
+				F127423E18BA9DC7007B9A65 /* NMAPIClient.h */,
+				F127423F18BA9DC7007B9A65 /* NMAPIClient.m */,
+			);
+			name = "API Client";
+			sourceTree = "<group>";
+		};
+		F127424118BA9DCC007B9A65 /* Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				F127424318BA9E11007B9A65 /* NMMappingProvider.h */,
+				F127424418BA9E11007B9A65 /* NMMappingProvider.m */,
+			);
+			name = Mappings;
+			sourceTree = "<group>";
+		};
+		F127424218BA9DD1007B9A65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F127424618BA9F53007B9A65 /* NMBusiness.h */,
+				F127424718BA9F53007B9A65 /* NMBusiness.m */,
+				F127424918BAA478007B9A65 /* NMBusinessReviewSearch.h */,
+				F127424A18BAA478007B9A65 /* NMBusinessReviewSearch.m */,
+				F168262218C6C29A00E11BD5 /* NMCategory.h */,
+				F168262318C6C29A00E11BD5 /* NMCategory.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F127424F18BABF32007B9A65 /* Location Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F127425018BABF45007B9A65 /* NMLocationManager.h */,
+				F127425118BABF45007B9A65 /* NMLocationManager.m */,
+			);
+			name = "Location Manager";
+			sourceTree = "<group>";
+		};
+		F168262518C6C88500E11BD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F168262618C6C88B00E11BD5 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F168262618C6C88B00E11BD5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */,
+				F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */,
+				F168262D18C6CA9100E11BD5 /* OpenSans-Semibold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F127422118BA8E1F007B9A65 /* Build configuration list for PBXNativeTarget "NearMe" */;
 			buildPhases = (
+				D6A15D7EC3BC4D50850F6A73 /* Check Pods Manifest.lock */,
 				F12741EB18BA8E1F007B9A65 /* Sources */,
 				F12741EC18BA8E1F007B9A65 /* Frameworks */,
 				F12741ED18BA8E1F007B9A65 /* Resources */,
+				6E2C0B59281846FFBDE1CA59 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +385,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F168262E18C6CA9100E11BD5 /* OpenSans-Semibold.ttf in Resources */,
+				F168262C18C6C9BC00E11BD5 /* OpenSans-Regular.ttf in Resources */,
 				F127420B18BA8E1F007B9A65 /* Images.xcassets in Resources */,
 				F12741FD18BA8E1F007B9A65 /* InfoPlist.strings in Resources */,
 				F127420618BA8E1F007B9A65 /* Main.storyboard in Resources */,
+				F168262A18C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +404,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E2C0B59281846FFBDE1CA59 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6A15D7EC3BC4D50850F6A73 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F12741EB18BA8E1F007B9A65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */,
+				F127423618BA9448007B9A65 /* NMBusinessDetailView.m in Sources */,
+				F127425218BABF45007B9A65 /* NMLocationManager.m in Sources */,
 				F127420918BA8E1F007B9A65 /* NMViewController.m in Sources */,
 				F12741FF18BA8E1F007B9A65 /* main.m in Sources */,
+				F127424E18BAAF20007B9A65 /* NMBusinessLocation.m in Sources */,
 				F127420318BA8E1F007B9A65 /* NMAppDelegate.m in Sources */,
+				F127424818BA9F53007B9A65 /* NMBusiness.m in Sources */,
+				F127424018BA9DC7007B9A65 /* NMAPIClient.m in Sources */,
+				F127424518BA9E11007B9A65 /* NMMappingProvider.m in Sources */,
+				F127422D18BA9090007B9A65 /* NMBusinessListViewTableCell.m in Sources */,
+				F127422A18BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m in Sources */,
+				F127423A18BA98D1007B9A65 /* NMMapView.m in Sources */,
+				F127424B18BAA478007B9A65 /* NMBusinessReviewSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +579,7 @@
 		};
 		F127422218BA8E1F007B9A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -389,6 +593,7 @@
 		};
 		F127422318BA8E1F007B9A65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +666,7 @@
 				F127422318BA8E1F007B9A65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F127422418BA8E1F007B9A65 /* Build configuration list for PBXNativeTarget "NearMeTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +675,7 @@
 				F127422618BA8E1F007B9A65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

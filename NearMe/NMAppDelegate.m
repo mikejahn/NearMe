@@ -7,6 +7,8 @@
 //
 
 #import "NMAppDelegate.h"
+#import "NMMapView.h"
+
 
 @implementation NMAppDelegate
 
