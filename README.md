@@ -12,8 +12,9 @@ A sample iOS application consuming the Yelp 1.0 API to show UITableView, Detail 
 
 
 ### Screenshots:
-![Locations Screen](https://f.cloud.github.com/assets/389926/2431890/134f4040-ad49-11e3-9309-2edfef35cd87.png)
-![Detail Screen](https://f.cloud.github.com/assets/389926/2431888/134ce21e-ad49-11e3-803e-ce818ba0292f.png)
-![Search Screen](https://f.cloud.github.com/assets/389926/2431889/134f1f84-ad49-11e3-9977-aa71e4f148bb.png)
-![MapView Screen](https://f.cloud.github.com/assets/389926/2431887/13420d94-ad49-11e3-9eb1-da26a24e1f96.png)
+![map](https://f.cloud.github.com/assets/389926/2431909/fe578408-ad49-11e3-9651-f51f1340aa05.png)
+![search](https://f.cloud.github.com/assets/389926/2431910/fe57d494-ad49-11e3-9d58-17286b9a055a.png)
+![locations](https://f.cloud.github.com/assets/389926/2431911/fe59c15a-ad49-11e3-9957-dbb7bda08bf0.png)
+![detail](https://f.cloud.github.com/assets/389926/2431912/fe5fd39c-ad49-11e3-97d2-8bd51edbaf9a.png)
+
 
