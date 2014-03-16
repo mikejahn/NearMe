@@ -93,14 +93,8 @@
 #pragma mark - Configure Cell Methods
 - (void)configureHeaderCell:(NMReviewHeaderCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
 {
-    NSURL *url = [[NSURL alloc] initWithString:self.business.photo_url];
-    [cell.businessImage setImageWithURL:url];
-    
-    CALayer * l = [cell.businessImage layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:3.0];
-    [l setBorderWidth:1.0];
-    [l setBorderColor:[[UIColor grayColor] CGColor]];
+    NSURL *businessImageUrl = [[NSURL alloc] initWithString:self.business.photo_url];
+    [cell.businessImage setImageWithURL:businessImageUrl];
     
     NSURL *ratingImageURL = [[NSURL alloc] initWithString:self.business.rating_img_url];
     [cell.ratingImageView setImageWithURL:ratingImageURL];
@@ -118,13 +112,9 @@
 - (void)configureReviewCell:(NMReviewTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
 {
     NMReview *review = [self.business.reviews objectAtIndex:indexPath.row];
-    
     [cell.userLabel setText:review.user_name];
     NSURL *userPhotoUrl = [[NSURL alloc] initWithString:review.user_photo_url_small];
     [cell.userThumbnailImageView setImageWithURL:userPhotoUrl];
-    CALayer * l = [cell.userThumbnailImageView layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:2.0];
     NSURL *reviewPhotoUrl = [[NSURL alloc] initWithString:review.rating_img_url_small];
     [cell.reviewImageView setImageWithURL:reviewPhotoUrl];
     [cell.reviewTextView setText:review.text_excerpt];
