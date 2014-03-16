@@ -1,7 +1,7 @@
 NearMe
 ======
 
-A sample iOS application consuming the Yelp 1.0 API to show UITableView, Detail View, Location, API Client using RestKit, and other things.
+A sample iOS application consuming the Yelp 1.0 API to show UITableView, Detail View, MKMapView, API Client using RestKit, and other things.
 
 
 ### To Run:
