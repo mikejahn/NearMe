@@ -37,6 +37,7 @@
 		F1356B0318D3E95F00366761 /* NMReviewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0218D3E95F00366761 /* NMReviewHeaderCell.m */; };
 		F1356B0518D6271E00366761 /* NMAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0418D6271E00366761 /* NMAPITests.m */; };
 		F1356B0818D62A1E00366761 /* businesses.json in Resources */ = {isa = PBXBuildFile; fileRef = F1356B0718D62A1E00366761 /* businesses.json */; };
+		F1356B0A18D6350600366761 /* NMBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0918D6350600366761 /* NMBusinessTests.m */; };
 		F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F168262318C6C29A00E11BD5 /* NMCategory.m */; };
 		F168262A18C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */; };
 		F168262C18C6C9BC00E11BD5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */; };
@@ -103,6 +104,7 @@
 		F1356B0218D3E95F00366761 /* NMReviewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMReviewHeaderCell.m; sourceTree = "<group>"; };
 		F1356B0418D6271E00366761 /* NMAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAPITests.m; sourceTree = "<group>"; };
 		F1356B0718D62A1E00366761 /* businesses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businesses.json; sourceTree = "<group>"; };
+		F1356B0918D6350600366761 /* NMBusinessTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessTests.m; sourceTree = "<group>"; };
 		F168262218C6C29A00E11BD5 /* NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCategory.h; sourceTree = "<group>"; };
 		F168262318C6C29A00E11BD5 /* NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCategory.m; sourceTree = "<group>"; };
 		F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				F127421818BA8E1F007B9A65 /* Supporting Files */,
 				F1356B0418D6271E00366761 /* NMAPITests.m */,
+				F1356B0918D6350600366761 /* NMBusinessTests.m */,
 			);
 			path = NearMeTests;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1356B0A18D6350600366761 /* NMBusinessTests.m in Sources */,
 				F1356B0518D6271E00366761 /* NMAPITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

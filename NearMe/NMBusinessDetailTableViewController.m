@@ -87,8 +87,6 @@
 -(void)call
 {
     NSString *phoneAction = [NSString stringWithFormat:@"tel:%@", self.business.phone];
-    NSLog(@"call... %@", phoneAction);
-
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneAction]];
 }
 

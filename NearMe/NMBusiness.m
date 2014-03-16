@@ -23,7 +23,7 @@
 -(NSString *)distanceToString
 {
     NSString *shortDistanceString = [self.distance substringWithRange:NSMakeRange(0,3)];
-    NSString *milesLabel = @" miles away";
+    NSString *milesLabel = @"miles away";
     return [NSString stringWithFormat:@"%@ %@",shortDistanceString, milesLabel];
 }
 
