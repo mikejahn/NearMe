@@ -9,8 +9,7 @@
 #import "NMMapView.h"
 #import "NMBusinessLocation.h"
 #import "NMBUsiness.h"
-#import "NMBusinessDetailView.h"
-
+#import "NMBusinessDetailTableViewController.h"
 @interface NMMapView ()
 
 @end
@@ -67,7 +66,7 @@
 {
     if([[segue identifier] isEqualToString:@"mapDetailView"])
     {
-        NMBusinessDetailView *detailView = (NMBusinessDetailView *)segue.destinationViewController;
+        NMBusinessDetailTableViewController *detailView = (NMBusinessDetailTableViewController *)segue.destinationViewController;
         NMBusinessLocation *loc =  [self.mapView.selectedAnnotations objectAtIndex:0];
         [detailView setBusiness:loc.business];
     }
@@ -80,6 +79,10 @@
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation
 {
+    //don't use custom annotation if it is the user's location
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
     MKPinAnnotationView *newAnnotation = [[MKPinAnnotationView alloc]     initWithAnnotation:annotation reuseIdentifier:@"pinLocation"];
     newAnnotation.canShowCallout = YES;
     newAnnotation.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];

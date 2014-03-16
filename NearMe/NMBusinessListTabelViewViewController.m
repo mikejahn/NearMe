@@ -13,9 +13,9 @@
 #import "NMBusiness.h"
 #import <AKLocationManager/AKLocationManager.h>
 #import "NMMapView.h"
-#import "NMBusinessDetailView.h"
 #import "NMCategory.h"
 #import <SVPullToRefresh/SVPullToRefresh.h>
+#import "NMBusinessDetailTableViewController.h"
 
 @interface NMBusinessListTabelViewViewController ()
 
@@ -60,7 +60,6 @@
 {
     __weak NMBusinessListTabelViewViewController *weakSelf = self;
     [AKLocationManager startLocatingWithUpdateBlock:^(CLLocation *location){
-        // location acquired
         [weakSelf.tableView.pullToRefreshView startAnimating];
         [self loadData:location];
         
@@ -78,22 +77,14 @@
 #pragma mark - Data loading methods
 -(void)loadData:(CLLocation *)location
 {
-   // [self showActivityIndicator];
     __weak NMBusinessListTabelViewViewController *weakSelf = self;
-
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
     NMAPIClient *api = [[NMAPIClient alloc] init];
     void (^successBlock)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult);
     successBlock = ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-      //  [self dismissActivityIndicator];
         app.networkActivityIndicatorVisible = NO;
-
-
         NMBusinessReviewSearch *search = mappingResult.array[0];
-
-        
-        
         NSArray *sortedArray;
         sortedArray = [search.businesses sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
             NSString *first = [(NMBusiness *)a distance];
@@ -103,10 +94,6 @@
         
         self.locations = [sortedArray mutableCopy];
         self.filteredLocations = [NSMutableArray arrayWithCapacity:[self.locations count]];
-        
-        
-        NSLog(@"mappingResult: %@", search.businesses);
-
         [self.tableView reloadData];
         [weakSelf.tableView.pullToRefreshView stopAnimating];
 
@@ -115,8 +102,6 @@
     failureBlock = ^(RKObjectRequestOperation *operation, NSError *error) {
         app.networkActivityIndicatorVisible = NO;
         [weakSelf.tableView.pullToRefreshView stopAnimating];
-
-
         NSLog(@"ERROR: %@", error);
         NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
     };
@@ -141,12 +126,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        NSLog(@"Filtered Count: %lu", (unsigned long)self.filteredLocations.count);
-
         return [self.filteredLocations count];
     } else {
-        NSLog(@"Un Count: %lu", (unsigned long)self.locations.count);
-
         return [self.locations count];
     }
 }
@@ -177,13 +158,8 @@
     NMCategory *category = [business.categories objectAtIndex:0];
     cell.category.text = category.name;
     cell.category.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-    
     cell.name.text = business.name;
     cell.name.font = [UIFont fontWithName:@"OpenSans-Semibold" size:16.0f];
-    
-    
-    NSString *shortDistanceString = [business.distance substringWithRange:NSMakeRange(0,3)];
-    NSString *milesLabel = @" miles away";
     NSURL *url = [[NSURL alloc] initWithString:business.photo_url];
     [cell.imageThumbnail setImageWithURL:url];
     
@@ -194,33 +170,26 @@
     [l setBorderColor:[[UIColor grayColor] CGColor]];
     
     
-    [cell.distance setText:[NSString stringWithFormat:@"%@ %@",shortDistanceString, milesLabel]];
+    [cell.distance setText:business.distanceToString];
     cell.distance.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-    
-    BOOL boolValue = [business.is_closed boolValue];
-    NSString *open = boolValue ? @"Closed" : @"Open";
-    [cell.status setText:open];
+    [cell.status setText:business.isOpen];
     cell.status.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
 }
 
 #pragma mark Content Filtering
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    NSLog(@"Filter..");
     // Update the filtered array based on the search text and scope.
     // Remove all objects from the filtered search array
     [self.filteredLocations removeAllObjects];
     // Filter the array using NSPredicate
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
     self.filteredLocations = [NSMutableArray arrayWithArray:[self.locations filteredArrayUsingPredicate:predicate]];
-    NSLog(@"Filtered Locations: %@",self.filteredLocations);
     [self.tableView reloadData];
 
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    NSLog(@"Search.");
-
     // Tells the table data source to reload when text changes
     [self filterContentForSearchText:searchString scope:
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
@@ -229,8 +198,6 @@
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    NSLog(@"Search.ReloadScope");
-
     // Tells the table data source to reload when scope bar selection changes
     [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
@@ -246,15 +213,13 @@
 #pragma mark - Storyboard methods
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"prepare...");
     if([segue.destinationViewController isKindOfClass:[NMMapView class]]){
         NMMapView *mapViewController = (NMMapView *)segue.destinationViewController;
         [mapViewController setLocations:self.locations];
     } else {
-        NSLog(@"table view sender...");
-        NMBusinessDetailView *detailView = (NMBusinessDetailView *)segue.destinationViewController;
+          NMBusinessDetailTableViewController *detailTableViewController = (NMBusinessDetailTableViewController *)segue.destinationViewController;
         NMBusiness *business = [self.locations objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-        [detailView setBusiness:business];
+        detailTableViewController.business = business;
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80E1CA59247940D2905E09D0 /* libPods-NearMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D23C45FD6D88437F89114274 /* libPods-NearMeTests.a */; };
 		DA3C2EBF0DD5490CB028D2D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34EAA7791B44F45BE8DFD94 /* libPods.a */; };
 		F12741F318BA8E1F007B9A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F218BA8E1F007B9A65 /* Foundation.framework */; };
 		F12741F518BA8E1F007B9A65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F418BA8E1F007B9A65 /* CoreGraphics.framework */; };
@@ -15,16 +16,13 @@
 		F12741FF18BA8E1F007B9A65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F12741FE18BA8E1F007B9A65 /* main.m */; };
 		F127420318BA8E1F007B9A65 /* NMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F127420218BA8E1F007B9A65 /* NMAppDelegate.m */; };
 		F127420618BA8E1F007B9A65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F127420418BA8E1F007B9A65 /* Main.storyboard */; };
-		F127420918BA8E1F007B9A65 /* NMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F127420818BA8E1F007B9A65 /* NMViewController.m */; };
 		F127420B18BA8E1F007B9A65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F127420A18BA8E1F007B9A65 /* Images.xcassets */; };
 		F127421218BA8E1F007B9A65 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F127421118BA8E1F007B9A65 /* XCTest.framework */; };
 		F127421318BA8E1F007B9A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F218BA8E1F007B9A65 /* Foundation.framework */; };
 		F127421418BA8E1F007B9A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12741F618BA8E1F007B9A65 /* UIKit.framework */; };
 		F127421C18BA8E1F007B9A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F127421A18BA8E1F007B9A65 /* InfoPlist.strings */; };
-		F127421E18BA8E1F007B9A65 /* NearMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F127421D18BA8E1F007B9A65 /* NearMeTests.m */; };
 		F127422A18BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F127422918BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m */; };
 		F127422D18BA9090007B9A65 /* NMBusinessListViewTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F127422C18BA9090007B9A65 /* NMBusinessListViewTableCell.m */; };
-		F127423618BA9448007B9A65 /* NMBusinessDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423518BA9448007B9A65 /* NMBusinessDetailView.m */; };
 		F127423A18BA98D1007B9A65 /* NMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423918BA98D1007B9A65 /* NMMapView.m */; };
 		F127423C18BA99AD007B9A65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F127423B18BA99AD007B9A65 /* MapKit.framework */; };
 		F127424018BA9DC7007B9A65 /* NMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F127423F18BA9DC7007B9A65 /* NMAPIClient.m */; };
@@ -33,6 +31,12 @@
 		F127424B18BAA478007B9A65 /* NMBusinessReviewSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424A18BAA478007B9A65 /* NMBusinessReviewSearch.m */; };
 		F127424E18BAAF20007B9A65 /* NMBusinessLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */; };
 		F127425218BABF45007B9A65 /* NMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F127425118BABF45007B9A65 /* NMLocationManager.m */; };
+		F1356AF418D3C9EC00366761 /* NMReview.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356AF318D3C9EC00366761 /* NMReview.m */; };
+		F1356AF818D3CDBB00366761 /* NMReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356AF718D3CDBB00366761 /* NMReviewTableViewCell.m */; };
+		F1356AFB18D3D6C500366761 /* NMBusinessDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356AFA18D3D6C500366761 /* NMBusinessDetailTableViewController.m */; };
+		F1356B0318D3E95F00366761 /* NMReviewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0218D3E95F00366761 /* NMReviewHeaderCell.m */; };
+		F1356B0518D6271E00366761 /* NMAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0418D6271E00366761 /* NMAPITests.m */; };
+		F1356B0818D62A1E00366761 /* businesses.json in Resources */ = {isa = PBXBuildFile; fileRef = F1356B0718D62A1E00366761 /* businesses.json */; };
 		F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F168262318C6C29A00E11BD5 /* NMCategory.m */; };
 		F168262A18C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */; };
 		F168262C18C6C9BC00E11BD5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */; };
@@ -52,6 +56,8 @@
 /* Begin PBXFileReference section */
 		9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C34EAA7791B44F45BE8DFD94 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23C45FD6D88437F89114274 /* libPods-NearMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NearMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB68BCCD4594E5AA2092F56 /* Pods-NearMeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearMeTests.xcconfig"; path = "Pods/Pods-NearMeTests.xcconfig"; sourceTree = "<group>"; };
 		F12741EF18BA8E1F007B9A65 /* NearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12741F218BA8E1F007B9A65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F12741F418BA8E1F007B9A65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,20 +69,15 @@
 		F127420118BA8E1F007B9A65 /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
 		F127420218BA8E1F007B9A65 /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
 		F127420518BA8E1F007B9A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F127420718BA8E1F007B9A65 /* NMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMViewController.h; sourceTree = "<group>"; };
-		F127420818BA8E1F007B9A65 /* NMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMViewController.m; sourceTree = "<group>"; };
 		F127420A18BA8E1F007B9A65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F127421018BA8E1F007B9A65 /* NearMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F127421118BA8E1F007B9A65 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F127421918BA8E1F007B9A65 /* NearMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NearMeTests-Info.plist"; sourceTree = "<group>"; };
 		F127421B18BA8E1F007B9A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F127421D18BA8E1F007B9A65 /* NearMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearMeTests.m; sourceTree = "<group>"; };
 		F127422818BA8E65007B9A65 /* NMBusinessListTabelViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessListTabelViewViewController.h; sourceTree = "<group>"; };
 		F127422918BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessListTabelViewViewController.m; sourceTree = "<group>"; };
 		F127422B18BA9090007B9A65 /* NMBusinessListViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessListViewTableCell.h; sourceTree = "<group>"; };
 		F127422C18BA9090007B9A65 /* NMBusinessListViewTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessListViewTableCell.m; sourceTree = "<group>"; };
-		F127423418BA9448007B9A65 /* NMBusinessDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessDetailView.h; sourceTree = "<group>"; };
-		F127423518BA9448007B9A65 /* NMBusinessDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessDetailView.m; sourceTree = "<group>"; };
 		F127423818BA98D1007B9A65 /* NMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMapView.h; sourceTree = "<group>"; };
 		F127423918BA98D1007B9A65 /* NMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMapView.m; sourceTree = "<group>"; };
 		F127423B18BA99AD007B9A65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -92,6 +93,16 @@
 		F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessLocation.m; sourceTree = "<group>"; };
 		F127425018BABF45007B9A65 /* NMLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLocationManager.h; sourceTree = "<group>"; };
 		F127425118BABF45007B9A65 /* NMLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMLocationManager.m; sourceTree = "<group>"; };
+		F1356AF218D3C9EC00366761 /* NMReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMReview.h; sourceTree = "<group>"; };
+		F1356AF318D3C9EC00366761 /* NMReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMReview.m; sourceTree = "<group>"; };
+		F1356AF618D3CDBB00366761 /* NMReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMReviewTableViewCell.h; sourceTree = "<group>"; };
+		F1356AF718D3CDBB00366761 /* NMReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMReviewTableViewCell.m; sourceTree = "<group>"; };
+		F1356AF918D3D6C500366761 /* NMBusinessDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBusinessDetailTableViewController.h; sourceTree = "<group>"; };
+		F1356AFA18D3D6C500366761 /* NMBusinessDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessDetailTableViewController.m; sourceTree = "<group>"; };
+		F1356B0118D3E95F00366761 /* NMReviewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMReviewHeaderCell.h; sourceTree = "<group>"; };
+		F1356B0218D3E95F00366761 /* NMReviewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMReviewHeaderCell.m; sourceTree = "<group>"; };
+		F1356B0418D6271E00366761 /* NMAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAPITests.m; sourceTree = "<group>"; };
+		F1356B0718D62A1E00366761 /* businesses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businesses.json; sourceTree = "<group>"; };
 		F168262218C6C29A00E11BD5 /* NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCategory.h; sourceTree = "<group>"; };
 		F168262318C6C29A00E11BD5 /* NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCategory.m; sourceTree = "<group>"; };
 		F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -119,6 +130,7 @@
 				F127421218BA8E1F007B9A65 /* XCTest.framework in Frameworks */,
 				F127421418BA8E1F007B9A65 /* UIKit.framework in Frameworks */,
 				F127421318BA8E1F007B9A65 /* Foundation.framework in Frameworks */,
+				80E1CA59247940D2905E09D0 /* libPods-NearMeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +145,7 @@
 				F12741F118BA8E1F007B9A65 /* Frameworks */,
 				F12741F018BA8E1F007B9A65 /* Products */,
 				9D27A7B04CF749CD9BD038DE /* Pods.xcconfig */,
+				EFB68BCCD4594E5AA2092F56 /* Pods-NearMeTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +167,7 @@
 				F12741F618BA8E1F007B9A65 /* UIKit.framework */,
 				F127421118BA8E1F007B9A65 /* XCTest.framework */,
 				C34EAA7791B44F45BE8DFD94 /* libPods.a */,
+				D23C45FD6D88437F89114274 /* libPods-NearMeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,8 +184,6 @@
 				F127420118BA8E1F007B9A65 /* NMAppDelegate.h */,
 				F127420218BA8E1F007B9A65 /* NMAppDelegate.m */,
 				F127420418BA8E1F007B9A65 /* Main.storyboard */,
-				F127420718BA8E1F007B9A65 /* NMViewController.h */,
-				F127420818BA8E1F007B9A65 /* NMViewController.m */,
 				F127420A18BA8E1F007B9A65 /* Images.xcassets */,
 				F12741F918BA8E1F007B9A65 /* Supporting Files */,
 			);
@@ -192,8 +204,8 @@
 		F127421718BA8E1F007B9A65 /* NearMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F127421D18BA8E1F007B9A65 /* NearMeTests.m */,
 				F127421818BA8E1F007B9A65 /* Supporting Files */,
+				F1356B0418D6271E00366761 /* NMAPITests.m */,
 			);
 			path = NearMeTests;
 			sourceTree = "<group>";
@@ -201,6 +213,7 @@
 		F127421818BA8E1F007B9A65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F1356B0618D62A1200366761 /* Stubs */,
 				F127421918BA8E1F007B9A65 /* NearMeTests-Info.plist */,
 				F127421A18BA8E1F007B9A65 /* InfoPlist.strings */,
 			);
@@ -229,8 +242,9 @@
 		F127423318BA942E007B9A65 /* Detail View */ = {
 			isa = PBXGroup;
 			children = (
-				F127423418BA9448007B9A65 /* NMBusinessDetailView.h */,
-				F127423518BA9448007B9A65 /* NMBusinessDetailView.m */,
+				F1356B0018D3E94500366761 /* Cells */,
+				F1356AF918D3D6C500366761 /* NMBusinessDetailTableViewController.h */,
+				F1356AFA18D3D6C500366761 /* NMBusinessDetailTableViewController.m */,
 			);
 			name = "Detail View";
 			sourceTree = "<group>";
@@ -275,6 +289,8 @@
 				F127424A18BAA478007B9A65 /* NMBusinessReviewSearch.m */,
 				F168262218C6C29A00E11BD5 /* NMCategory.h */,
 				F168262318C6C29A00E11BD5 /* NMCategory.m */,
+				F1356AF218D3C9EC00366761 /* NMReview.h */,
+				F1356AF318D3C9EC00366761 /* NMReview.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -286,6 +302,41 @@
 				F127425118BABF45007B9A65 /* NMLocationManager.m */,
 			);
 			name = "Location Manager";
+			sourceTree = "<group>";
+		};
+		F1356AF518D3CD9C00366761 /* Review Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1356AF618D3CDBB00366761 /* NMReviewTableViewCell.h */,
+				F1356AF718D3CDBB00366761 /* NMReviewTableViewCell.m */,
+			);
+			name = "Review Cell";
+			sourceTree = "<group>";
+		};
+		F1356AFC18D3E17900366761 /* Header View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1356B0118D3E95F00366761 /* NMReviewHeaderCell.h */,
+				F1356B0218D3E95F00366761 /* NMReviewHeaderCell.m */,
+			);
+			name = "Header View Cell";
+			sourceTree = "<group>";
+		};
+		F1356B0018D3E94500366761 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1356AFC18D3E17900366761 /* Header View Cell */,
+				F1356AF518D3CD9C00366761 /* Review Cell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F1356B0618D62A1200366761 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				F1356B0718D62A1E00366761 /* businesses.json */,
+			);
+			name = Stubs;
 			sourceTree = "<group>";
 		};
 		F168262518C6C88500E11BD5 /* Resources */ = {
@@ -332,9 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F127422418BA8E1F007B9A65 /* Build configuration list for PBXNativeTarget "NearMeTests" */;
 			buildPhases = (
+				12D77369D4924BF29D46A863 /* Check Pods Manifest.lock */,
 				F127420C18BA8E1F007B9A65 /* Sources */,
 				F127420D18BA8E1F007B9A65 /* Frameworks */,
 				F127420E18BA8E1F007B9A65 /* Resources */,
+				E78FEF80F4AE48AEB27AFC73 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,12 +452,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F127421C18BA8E1F007B9A65 /* InfoPlist.strings in Resources */,
+				F1356B0818D62A1E00366761 /* businesses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12D77369D4924BF29D46A863 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		6E2C0B59281846FFBDE1CA59 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +504,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E78FEF80F4AE48AEB27AFC73 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-NearMeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -443,9 +527,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */,
-				F127423618BA9448007B9A65 /* NMBusinessDetailView.m in Sources */,
+				F1356B0318D3E95F00366761 /* NMReviewHeaderCell.m in Sources */,
+				F1356AF818D3CDBB00366761 /* NMReviewTableViewCell.m in Sources */,
 				F127425218BABF45007B9A65 /* NMLocationManager.m in Sources */,
-				F127420918BA8E1F007B9A65 /* NMViewController.m in Sources */,
+				F1356AF418D3C9EC00366761 /* NMReview.m in Sources */,
 				F12741FF18BA8E1F007B9A65 /* main.m in Sources */,
 				F127424E18BAAF20007B9A65 /* NMBusinessLocation.m in Sources */,
 				F127420318BA8E1F007B9A65 /* NMAppDelegate.m in Sources */,
@@ -455,6 +540,7 @@
 				F127422D18BA9090007B9A65 /* NMBusinessListViewTableCell.m in Sources */,
 				F127422A18BA8E65007B9A65 /* NMBusinessListTabelViewViewController.m in Sources */,
 				F127423A18BA98D1007B9A65 /* NMMapView.m in Sources */,
+				F1356AFB18D3D6C500366761 /* NMBusinessDetailTableViewController.m in Sources */,
 				F127424B18BAA478007B9A65 /* NMBusinessReviewSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F127421E18BA8E1F007B9A65 /* NearMeTests.m in Sources */,
+				F1356B0518D6271E00366761 /* NMAPITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +693,7 @@
 		};
 		F127422518BA8E1F007B9A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB68BCCD4594E5AA2092F56 /* Pods-NearMeTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NearMe.app/NearMe";
@@ -630,6 +717,7 @@
 		};
 		F127422618BA8E1F007B9A65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB68BCCD4594E5AA2092F56 /* Pods-NearMeTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NearMe.app/NearMe";

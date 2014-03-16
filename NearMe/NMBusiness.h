@@ -20,4 +20,9 @@
 @property (nonatomic, strong) NSArray *categories;
 @property (nonatomic, strong) NSString *distance;
 @property (nonatomic, strong) NSString *is_closed;
+@property (nonatomic, strong) NSArray *reviews;
+@property (nonatomic, strong) NSString *rating_img_url;
+
+-(NSString *)isOpen;
+-(NSString *)distanceToString;
 @end
