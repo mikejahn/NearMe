@@ -6,7 +6,7 @@ A sample iOS application consuming the Yelp 1.0 API to show UITableView, Detail 
 
 ### To Run:
 1. ```cd``` into directory
-2. ```pod install```
+2. ```pod install``` (if you do not have cocoa pods installed, go here to install it: http://cocoapods.org/)
 3. open ```NearMe.xcworkspace``` file in xcode
 4. Run with simulator or on your ios device
 
