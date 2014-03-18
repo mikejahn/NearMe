@@ -177,7 +177,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54s-F6-Sa8">
                                             <rect key="frame" x="31" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" patternImage="62708DC6-7831-4AD8-861A-AEB0D370A6C0" colorSpace="pattern"/>
+                                            <color key="backgroundColor" patternImage="46B3D966-7918-4839-BC8B-5031D0B0B387" colorSpace="pattern"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-Jx-oP6">
                                             <rect key="frame" x="89" y="24" width="177" height="21"/>
@@ -312,7 +312,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="62708DC6-7831-4AD8-861A-AEB0D370A6C0" width="256" height="256">
+        <image name="46B3D966-7918-4839-BC8B-5031D0B0B387" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
