@@ -26,4 +26,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)phoneNumberTapped:(id)sender {
+    NSLog(@"call phone number..");
+}
 @end

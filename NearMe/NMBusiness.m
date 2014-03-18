@@ -9,10 +9,8 @@
 #import "NMBusiness.h"
 
 @implementation NMBusiness
+
 @synthesize name, photo_url, categories, distance, is_closed, latitude, longitude, address1, phone, state, city, reviews, rating_img_url;
-
-
-
 
 -(NSString *)isOpen
 {

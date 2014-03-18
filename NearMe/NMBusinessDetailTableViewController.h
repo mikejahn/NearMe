@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NMBusiness.h"
 
-@interface NMBusinessDetailTableViewController : UITableViewController
+@interface NMBusinessDetailTableViewController : UITableViewController 
 
 @property (strong, nonatomic) NMBusiness *business;
 

@@ -98,7 +98,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-Ie-qGy">
                                             <rect key="frame" x="20" y="20" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" patternImage="C36EA9B7-6E6F-4D73-8621-004326827973" colorSpace="pattern"/>
+                                            <color key="backgroundColor" patternImage="292B67F6-AFB9-4E8D-BB69-A0D90FF5FD38" colorSpace="pattern"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forkandspoon" translatesAutoresizingMaskIntoConstraints="NO" id="FWE-d1-JU1">
                                             <rect key="frame" x="78.5" y="55.5" width="14" height="16"/>
@@ -166,7 +166,7 @@
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewHeaderCell" id="pSD-5S-ycn" customClass="NMReviewHeaderCell">
                                 <rect key="frame" x="0.0" y="150" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="pSD-5S-ycn" id="eKX-45-wdl">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="pSD-5S-ycn" id="eKX-45-wdl">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -177,7 +177,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54s-F6-Sa8">
                                             <rect key="frame" x="31" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" patternImage="3868C5F9-C7D0-4C59-98BA-71588C440347" colorSpace="pattern"/>
+                                            <color key="backgroundColor" patternImage="CCAFAAE7-A845-4125-BAE9-BFCF2458E9D9" colorSpace="pattern"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-Jx-oP6">
                                             <rect key="frame" x="89" y="24" width="177" height="21"/>
@@ -312,7 +312,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3868C5F9-C7D0-4C59-98BA-71588C440347" width="256" height="256">
+        <image name="292B67F6-AFB9-4E8D-BB69-A0D90FF5FD38" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4702,7 +4702,7 @@ BAJoAAQCcAAEAnMABAKFAAQCiAAEAo0AAAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQCjw
 </mutableData>
         </image>
         <image name="BellyDog" width="55" height="54"/>
-        <image name="C36EA9B7-6E6F-4D73-8621-004326827973" width="256" height="256">
+        <image name="CCAFAAE7-A845-4125-BAE9-BFCF2458E9D9" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

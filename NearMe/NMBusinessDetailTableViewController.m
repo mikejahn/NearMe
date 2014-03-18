@@ -84,7 +84,7 @@
 }
 
 #pragma mark - UIButton action
--(void)call
+-(void)phoneNumberTapped
 {
     NSString *phoneAction = [NSString stringWithFormat:@"tel:%@", self.business.phone];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneAction]];
@@ -95,7 +95,6 @@
 {
     NSURL *businessImageUrl = [[NSURL alloc] initWithString:self.business.photo_url];
     [cell.businessImage setImageWithURL:businessImageUrl];
-    
     NSURL *ratingImageURL = [[NSURL alloc] initWithString:self.business.rating_img_url];
     [cell.ratingImageView setImageWithURL:ratingImageURL];
     
@@ -106,7 +105,7 @@
     [cell.categoryLabel setText:category.name];
     [cell.phoneNumberButton setTitle:self.business.phone forState:UIControlStateNormal];
     
-    [cell.phoneNumberButton addTarget:self action:@selector(call) forControlEvents:UIControlEventTouchUpInside];
+    [cell.phoneNumberButton addTarget:self action:@selector(phoneNumberTapped) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)configureReviewCell:(NMReviewTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
