@@ -83,7 +83,7 @@
    }
 }
 
-#pragma mark - UIButton action
+#pragma mark - UIButton actions
 -(void)phoneNumberTapped
 {
     NSString *phoneAction = [NSString stringWithFormat:@"tel:%@", self.business.phone];
@@ -95,15 +95,30 @@
 {
     NSURL *businessImageUrl = [[NSURL alloc] initWithString:self.business.photo_url];
     [cell.businessImage setImageWithURL:businessImageUrl];
+    CALayer * l = [cell.businessImage layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:3.0];
+    [l setBorderWidth:1.0];
+    [l setBorderColor:[[UIColor grayColor] CGColor]];
+    
     NSURL *ratingImageURL = [[NSURL alloc] initWithString:self.business.rating_img_url];
     [cell.ratingImageView setImageWithURL:ratingImageURL];
     
     [cell.address1Label setText:self.business.address1];
+    cell.address1Label.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+
     [cell.stateLabel setText:self.business.state];
+    cell.stateLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+
     [cell.cityLabel setText:self.business.city];
+    cell.cityLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+
     NMCategory *category = [self.business.categories objectAtIndex:0];
     [cell.categoryLabel setText:category.name];
+    cell.categoryLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+
     [cell.phoneNumberButton setTitle:self.business.phone forState:UIControlStateNormal];
+    cell.phoneNumberButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
     
     [cell.phoneNumberButton addTarget:self action:@selector(phoneNumberTapped) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -112,11 +127,18 @@
 {
     NMReview *review = [self.business.reviews objectAtIndex:indexPath.row];
     [cell.userLabel setText:review.user_name];
+    cell.userLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+
     NSURL *userPhotoUrl = [[NSURL alloc] initWithString:review.user_photo_url_small];
     [cell.userThumbnailImageView setImageWithURL:userPhotoUrl];
+    CALayer * l = [cell.userThumbnailImageView layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:2.0];
     NSURL *reviewPhotoUrl = [[NSURL alloc] initWithString:review.rating_img_url_small];
     [cell.reviewImageView setImageWithURL:reviewPhotoUrl];
     [cell.reviewTextView setText:review.text_excerpt];
+    cell.reviewTextView.font = [UIFont fontWithName:@"OpenSans" size:12.0f];
+    
 }
 
 

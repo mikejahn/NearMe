@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NMReviewTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *userLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userThumbnailImageView;
 @property (weak, nonatomic) IBOutlet UITextView *reviewTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *reviewImageView;

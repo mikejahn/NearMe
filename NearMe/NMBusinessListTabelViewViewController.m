@@ -169,7 +169,6 @@
     [l setBorderWidth:1.0];
     [l setBorderColor:[[UIColor grayColor] CGColor]];
     
-    
     [cell.distance setText:business.distanceToString];
     cell.distance.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
     [cell.status setText:business.isOpen];
