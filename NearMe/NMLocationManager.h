@@ -11,6 +11,7 @@
 
 
 @interface NMLocationManager : NSObject <CLLocationManagerDelegate>
+
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end

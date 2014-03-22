@@ -16,6 +16,7 @@
 #import "NMCategory.h"
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import "NMBusinessDetailTableViewController.h"
+#import "NMUtilities.h"
 
 @interface NMBusinessListTabelViewViewController ()
 
@@ -62,57 +63,73 @@
     [AKLocationManager startLocatingWithUpdateBlock:^(CLLocation *location){
         [weakSelf.tableView.pullToRefreshView startAnimating];
         [self loadData:location];
-        
     }failedBlock:^(NSError *error){
         NSLog(@"Could not get location... %@", error);
     }];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)setupNavBarTitle
 {
     self.navigationController.navigationBar.topItem.title = @"Locations";
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont
+                                                                           fontWithName:@"OpenSans-Semibold" size:18], NSFontAttributeName,
+                                [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self setupNavBarTitle];
 }
 
 
 #pragma mark - Data loading methods
 -(void)loadData:(CLLocation *)location
 {
-    __weak NMBusinessListTabelViewViewController *weakSelf = self;
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
+    
     NMAPIClient *api = [[NMAPIClient alloc] init];
+    
     void (^successBlock)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult);
     successBlock = ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         app.networkActivityIndicatorVisible = NO;
-        NMBusinessReviewSearch *search = mappingResult.array[0];
-        NSArray *sortedArray;
-        sortedArray = [search.businesses sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-            NSString *first = [(NMBusiness *)a distance];
-            NSString *second = [(NMBusiness *)b distance];
-            return [first compare:second];
-        }];
-        
-        self.locations = [sortedArray mutableCopy];
-        self.filteredLocations = [NSMutableArray arrayWithCapacity:[self.locations count]];
-        [self.tableView reloadData];
-        [weakSelf.tableView.pullToRefreshView stopAnimating];
-
+        [self onSuccessWithMappingResult:mappingResult];
     };
     void (^failureBlock)(RKObjectRequestOperation *operation, NSError *error);
     failureBlock = ^(RKObjectRequestOperation *operation, NSError *error) {
         app.networkActivityIndicatorVisible = NO;
-        [weakSelf.tableView.pullToRefreshView stopAnimating];
-        NSLog(@"ERROR: %@", error);
-        NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
+        [self onFailureWithOperation:operation andError:error];
     };
     [api getBusinesses:location withSuccessBLock:successBlock withFailureBlock:failureBlock];
-
-
 }
 
+#pragma mark - On Success of Network Call method
+-(void)onSuccessWithMappingResult:(RKMappingResult *)mappingResult
+{
+    NMBusinessReviewSearch *search = mappingResult.array[0];
+    NSArray *sortedArray;
+    sortedArray = [search.businesses sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSString *first = [(NMBusiness *)a distance];
+        NSString *second = [(NMBusiness *)b distance];
+        return [first compare:second];
+    }];
+    
+    self.locations = [sortedArray mutableCopy];
+    self.filteredLocations = [NSMutableArray arrayWithCapacity:[self.locations count]];
+    [self.tableView reloadData];
+    [self.tableView.pullToRefreshView stopAnimating];
+}
 
-#pragma mark - Table view data source
+#pragma mark - On Failure of Network Call method
+-(void)onFailureWithOperation:(RKObjectRequestOperation *)operation andError:(NSError *)error
+{
+    [self.tableView.pullToRefreshView stopAnimating];
+    NSLog(@"ERROR: %@", error);
+    NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
+}
 
+#pragma mark - Table view data source methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -145,34 +162,20 @@
     return cell;
 }
 
+#pragma mark  - configure business cell
 - (void)configureCell:(NMBusinessListViewTableCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
 {
     NMBusiness *business = nil;
-    
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         business = [self.filteredLocations objectAtIndex:indexPath.row];
     } else {
         business = [self.locations objectAtIndex:indexPath.row];
     }
-    
-    NMCategory *category = [business.categories objectAtIndex:0];
-    cell.category.text = category.name;
-    cell.category.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-    cell.name.text = business.name;
-    cell.name.font = [UIFont fontWithName:@"OpenSans-Semibold" size:16.0f];
-    NSURL *url = [[NSURL alloc] initWithString:business.photo_url];
-    [cell.imageThumbnail setImageWithURL:url];
-    
-    CALayer * l = [cell.imageThumbnail layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:3.0];
-    [l setBorderWidth:1.0];
-    [l setBorderColor:[[UIColor grayColor] CGColor]];
-    
-    [cell.distance setText:business.distanceToString];
-    cell.distance.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-    [cell.status setText:business.isOpen];
-    cell.status.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
+    [cell configureCategorywithBusiness:business];
+    [cell configureNamewithBusiness:business];
+    [cell configureImageThumbnailwithBusiness:business];
+    [cell configureDistancewithBusiness:business];
+    [cell configureStatuswithBusiness:business];
 }
 
 #pragma mark Content Filtering

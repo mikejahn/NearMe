@@ -25,10 +25,4 @@
     return self;
 }
 
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    NSLog(@"did update location");
-}
-
 @end

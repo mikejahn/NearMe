@@ -10,6 +10,7 @@
 #import "NMBusinessLocation.h"
 #import "NMBUsiness.h"
 #import "NMBusinessDetailTableViewController.h"
+
 @interface NMMapView ()
 
 @end
@@ -36,7 +37,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSMutableArray *temp = [NSMutableArray array];
+    NSMutableArray *annotations = [NSMutableArray array];
     for (NMBusiness *business in self.locations) {
         NMBusinessLocation *loc = [[NMBusinessLocation alloc] init];
         [loc setBusiness:business];
@@ -44,21 +45,23 @@
         [loc setTitle:business.name];
         
         [loc setCoordinate:CLLocationCoordinate2DMake([business.latitude doubleValue],[business.longitude doubleValue])];
-        [temp addObject:loc];
+        [annotations addObject:loc];
         [self.mapView addAnnotation:loc];
     }
     
-    //set bounds to locations
+    [self fitMapBoundsToAnnotations:annotations];
+}
+
+-(void)fitMapBoundsToAnnotations:(NSMutableArray *)annotations
+{
     MKMapRect zoomRect = MKMapRectNull;
-    for (id <MKAnnotation> annotation in temp)
+    for (id <MKAnnotation> annotation in annotations)
     {
         MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
         MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
         zoomRect = MKMapRectUnion(zoomRect, pointRect);
     }
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
-
-
 }
 
 #pragma mark - storyboard methods

@@ -12,6 +12,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "NMReviewHeaderCell.h"
 #import "NMCategory.h"
+#import "NMUtilities.h"
 
 @interface NMBusinessDetailTableViewController ()
 
@@ -50,27 +51,10 @@
 {
     if(indexPath.section == 0)
     {
-        static NSString *headerIdentifier = @"ReviewHeaderCell";
-        NMReviewHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:headerIdentifier];
-        if (headerCell == nil)
-        {
-            headerCell = [[NMReviewHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                      reuseIdentifier:headerIdentifier];
-        }
-        [self configureHeaderCell:headerCell atIndexPath:indexPath withTableView:tableView];
-        return headerCell;
+        return [self createHeaderCellWithTableView:tableView andIndexPath:indexPath];
     } else {
-        static NSString *reviewIdentifier = @"ReviewCell";
-        NMReviewTableViewCell *reviewCell = [tableView dequeueReusableCellWithIdentifier:reviewIdentifier];
-        if (reviewCell == nil)
-        {
-            reviewCell = [[NMReviewTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                reuseIdentifier:reviewIdentifier];
-        }
-        [self configureReviewCell:reviewCell atIndexPath:indexPath withTableView:tableView];
-        return reviewCell;
+        return [self createReviewCellWithTableView:tableView andIndexPath:indexPath];
     }
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,58 +74,54 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneAction]];
 }
 
-#pragma mark - Configure Cell Methods
+#pragma mark - Create cell methods
+-(NMReviewHeaderCell *)createHeaderCellWithTableView:(UITableView *)tableView andIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *headerIdentifier = @"ReviewHeaderCell";
+    NMReviewHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:headerIdentifier];
+    if (headerCell == nil)
+    {
+        headerCell = [[NMReviewHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                               reuseIdentifier:headerIdentifier];
+    }
+    [self configureHeaderCell:headerCell atIndexPath:indexPath withTableView:tableView];
+    return headerCell;
+}
+
+-(NMReviewTableViewCell *)createReviewCellWithTableView:(UITableView *)tableView andIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reviewIdentifier = @"ReviewCell";
+    NMReviewTableViewCell *reviewCell = [tableView dequeueReusableCellWithIdentifier:reviewIdentifier];
+    if (reviewCell == nil)
+    {
+        reviewCell = [[NMReviewTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                  reuseIdentifier:reviewIdentifier];
+    }
+    [self configureReviewCell:reviewCell atIndexPath:indexPath withTableView:tableView];
+    return reviewCell;
+}
+
+#pragma mark - configure header cell
 - (void)configureHeaderCell:(NMReviewHeaderCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
 {
-    NSURL *businessImageUrl = [[NSURL alloc] initWithString:self.business.photo_url];
-    [cell.businessImage setImageWithURL:businessImageUrl];
-    CALayer * l = [cell.businessImage layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:3.0];
-    [l setBorderWidth:1.0];
-    [l setBorderColor:[[UIColor grayColor] CGColor]];
-    
-    NSURL *ratingImageURL = [[NSURL alloc] initWithString:self.business.rating_img_url];
-    [cell.ratingImageView setImageWithURL:ratingImageURL];
-    
-    [cell.address1Label setText:self.business.address1];
-    cell.address1Label.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-
-    [cell.stateLabel setText:self.business.state];
-    cell.stateLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-
-    [cell.cityLabel setText:self.business.city];
-    cell.cityLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-
-    NMCategory *category = [self.business.categories objectAtIndex:0];
-    [cell.categoryLabel setText:category.name];
-    cell.categoryLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-
-    [cell.phoneNumberButton setTitle:self.business.phone forState:UIControlStateNormal];
-    cell.phoneNumberButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-    
+    [cell configureBusinessImagewithBusiness:self.business];
+    [cell configureRatingImagewithBusiness:self.business];
+    [cell configureAddresswithBusiness:self.business];
+    [cell configureStatewithBusiness:self.business];
+    [cell configureCitywithBusiness:self.business];
+    [cell configureCategorywithBusiness:self.business];
+    [cell configurePhoneNumberwithBusiness:self.business];
     [cell.phoneNumberButton addTarget:self action:@selector(phoneNumberTapped) forControlEvents:UIControlEventTouchUpInside];
 }
 
+#pragma mark - configure review cell
 - (void)configureReviewCell:(NMReviewTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView
 {
     NMReview *review = [self.business.reviews objectAtIndex:indexPath.row];
-    [cell.userLabel setText:review.user_name];
-    cell.userLabel.font = [UIFont fontWithName:@"OpenSans" size:13.0f];
-
-    NSURL *userPhotoUrl = [[NSURL alloc] initWithString:review.user_photo_url_small];
-    [cell.userThumbnailImageView setImageWithURL:userPhotoUrl];
-    CALayer * l = [cell.userThumbnailImageView layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:2.0];
-    NSURL *reviewPhotoUrl = [[NSURL alloc] initWithString:review.rating_img_url_small];
-    [cell.reviewImageView setImageWithURL:reviewPhotoUrl];
-    [cell.reviewTextView setText:review.text_excerpt];
-    cell.reviewTextView.font = [UIFont fontWithName:@"OpenSans" size:12.0f];
-    
+    [cell configureUserImagewithReview:review];
+    [cell configureUserLabelwithReview:review];
+    [cell configureRatingImagewithReview:review];
+    [cell configureExcerptwithReview:review];
 }
-
-
-
 
 @end

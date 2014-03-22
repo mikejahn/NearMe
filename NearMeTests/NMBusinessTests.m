@@ -21,12 +21,12 @@ describe(@"NMBusiness", ^{
     describe(@"isOpen", ^{
         it(@"should return 'Open' when is_closed is set to false", ^{
             [business setIs_closed:@"false"];
-            [[business.isOpen should] equal:@"Open"];
+            [[business.isOpen should] equal:@"OPEN"];
         });
         
         it(@"should return 'Closed' when is_closed is set to true", ^{
             [business setIs_closed:@"true"];
-            [[business.isOpen should] equal:@"Closed"];
+            [[business.isOpen should] equal:@"CLOSED"];
         });
         
     });
