@@ -7,26 +7,58 @@
 //
 
 #import "NMReviewHeaderCell.h"
+#import <AFNetworking/AFNetworking.h>
+#import "NMUtilities.h"
+#import "NMCategory.h"
 
 @implementation NMReviewHeaderCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+-(void)configureBusinessImagewithBusiness:(NMBusiness *)business
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    NSURL *businessImageUrl = [[NSURL alloc] initWithString:business.photo_url];
+    [self.businessImage setImageWithURL:businessImageUrl];
+    CALayer * l = [self.businessImage layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:3.0];
+    [l setBorderWidth:1.0];
+    [l setBorderColor:[[UIColor grayColor] CGColor]];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+-(void)configureRatingImagewithBusiness:(NMBusiness *)business
 {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    NSURL *ratingImageURL = [[NSURL alloc] initWithString:business.rating_img_url];
+    [self.ratingImageView setImageWithURL:ratingImageURL];
+    
 }
 
-- (IBAction)phoneNumberTapped:(id)sender {
-    NSLog(@"call phone number..");
+-(void)configureAddresswithBusiness:(NMBusiness *)business
+{
+    [self.address1Label setText:business.address1];
+    self.address1Label.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
+
+-(void)configureStatewithBusiness:(NMBusiness *)business
+{
+    [self.stateLabel setText:business.state];
+    self.stateLabel.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
+
+-(void)configureCitywithBusiness:(NMBusiness *)business
+{
+    [self.cityLabel setText:business.city];
+    self.cityLabel.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
+
+-(void)configureCategorywithBusiness:(NMBusiness *)business
+{
+    NMCategory *category = [business.categories objectAtIndex:0];
+    [self.categoryLabel setText:category.name];
+    self.categoryLabel.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
+
+-(void)configurePhoneNumberwithBusiness:(NMBusiness *)business
+{
+    [self.phoneNumberButton setTitle:business.phone forState:UIControlStateNormal];
+    self.phoneNumberButton.titleLabel.font = [NMUtilities getDefaultFontwithSize:13.0f];
 }
 @end

@@ -38,6 +38,7 @@
 		F1356B0518D6271E00366761 /* NMAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0418D6271E00366761 /* NMAPITests.m */; };
 		F1356B0818D62A1E00366761 /* businesses.json in Resources */ = {isa = PBXBuildFile; fileRef = F1356B0718D62A1E00366761 /* businesses.json */; };
 		F1356B0A18D6350600366761 /* NMBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1356B0918D6350600366761 /* NMBusinessTests.m */; };
+		F152CCB418DA72B400F00EE0 /* NMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F152CCB318DA72B400F00EE0 /* NMUtilities.m */; };
 		F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F168262318C6C29A00E11BD5 /* NMCategory.m */; };
 		F168262A18C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */; };
 		F168262C18C6C9BC00E11BD5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F168262B18C6C9BC00E11BD5 /* OpenSans-Regular.ttf */; };
@@ -105,6 +106,8 @@
 		F1356B0418D6271E00366761 /* NMAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAPITests.m; sourceTree = "<group>"; };
 		F1356B0718D62A1E00366761 /* businesses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businesses.json; sourceTree = "<group>"; };
 		F1356B0918D6350600366761 /* NMBusinessTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBusinessTests.m; sourceTree = "<group>"; };
+		F152CCB218DA72B400F00EE0 /* NMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUtilities.h; sourceTree = "<group>"; };
+		F152CCB318DA72B400F00EE0 /* NMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUtilities.m; sourceTree = "<group>"; };
 		F168262218C6C29A00E11BD5 /* NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCategory.h; sourceTree = "<group>"; };
 		F168262318C6C29A00E11BD5 /* NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCategory.m; sourceTree = "<group>"; };
 		F168262918C6C9B300E11BD5 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		F12741F818BA8E1F007B9A65 /* NearMe */ = {
 			isa = PBXGroup;
 			children = (
+				F152CCB118DA72A200F00EE0 /* Utilities */,
 				F168262518C6C88500E11BD5 /* Resources */,
 				F127424F18BABF32007B9A65 /* Location Manager */,
 				F127423D18BA9DAC007B9A65 /* API Client */,
@@ -255,10 +259,9 @@
 		F127423718BA98C0007B9A65 /* Map View */ = {
 			isa = PBXGroup;
 			children = (
+				F152CCB018DA70F000F00EE0 /* Annotation */,
 				F127423818BA98D1007B9A65 /* NMMapView.h */,
 				F127423918BA98D1007B9A65 /* NMMapView.m */,
-				F127424C18BAAF20007B9A65 /* NMBusinessLocation.h */,
-				F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */,
 			);
 			name = "Map View";
 			sourceTree = "<group>";
@@ -340,6 +343,24 @@
 				F1356B0718D62A1E00366761 /* businesses.json */,
 			);
 			name = Stubs;
+			sourceTree = "<group>";
+		};
+		F152CCB018DA70F000F00EE0 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				F127424C18BAAF20007B9A65 /* NMBusinessLocation.h */,
+				F127424D18BAAF20007B9A65 /* NMBusinessLocation.m */,
+			);
+			name = Annotation;
+			sourceTree = "<group>";
+		};
+		F152CCB118DA72A200F00EE0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F152CCB218DA72B400F00EE0 /* NMUtilities.h */,
+				F152CCB318DA72B400F00EE0 /* NMUtilities.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		F168262518C6C88500E11BD5 /* Resources */ = {
@@ -531,6 +552,7 @@
 			files = (
 				F168262418C6C29A00E11BD5 /* NMCategory.m in Sources */,
 				F1356B0318D3E95F00366761 /* NMReviewHeaderCell.m in Sources */,
+				F152CCB418DA72B400F00EE0 /* NMUtilities.m in Sources */,
 				F1356AF818D3CDBB00366761 /* NMReviewTableViewCell.m in Sources */,
 				F127425218BABF45007B9A65 /* NMLocationManager.m in Sources */,
 				F1356AF418D3C9EC00366761 /* NMReview.m in Sources */,

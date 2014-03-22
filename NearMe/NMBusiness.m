@@ -15,7 +15,7 @@
 -(NSString *)isOpen
 {
     BOOL boolValue = [self.is_closed boolValue];    
-    return boolValue ? @"Closed" : @"Open";
+    return boolValue ? @"CLOSED" : @"OPEN";
 }
 
 -(NSString *)distanceToString

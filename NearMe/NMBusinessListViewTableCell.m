@@ -7,23 +7,52 @@
 //
 
 #import "NMBusinessListViewTableCell.h"
+#import "NMCategory.h"
+#import <AFNetworking/AFNetworking.h>
+#import "NMUtilities.h"
 
 @implementation NMBusinessListViewTableCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+
+-(void)configureNamewithBusiness:(NMBusiness *)business
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    self.name.text = business.name;
+    self.name.font = [UIFont fontWithName:@"OpenSans-Semibold" size:16.0f];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+-(void)configureCategorywithBusiness:(NMBusiness *)business
 {
-    [super setSelected:selected animated:animated];
+    NMCategory *category = [business.categories objectAtIndex:0];
+    self.category.text = category.name;
+    self.category.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
 
-    // Configure the view for the selected state
+-(void)configureImageThumbnailwithBusiness:(NMBusiness *)business
+{
+    NSURL *url = [[NSURL alloc] initWithString:business.photo_url];
+    [self.imageThumbnail setImageWithURL:url];
+    
+    CALayer * l = [self.imageThumbnail layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:3.0];
+    [l setBorderWidth:1.0];
+    [l setBorderColor:[[UIColor grayColor] CGColor]];
+}
+
+-(void)configureDistancewithBusiness:(NMBusiness *)business
+{
+    [self.distance setText:business.distanceToString];
+    self.distance.font = [NMUtilities getDefaultFontwithSize:13.0f];
+}
+
+-(void)configureStatuswithBusiness:(NMBusiness *)business
+{
+    [self.status setText:business.isOpen];
+    if(!business.isOpen)
+    {
+        [self.status setTextColor:[UIColor redColor]];
+    }
+    self.status.font = [NMUtilities getDefaultFontwithSize:13.0f];
 }
 
 @end

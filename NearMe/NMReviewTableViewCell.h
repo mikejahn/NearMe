@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NMReview.h"
 
 @interface NMReviewTableViewCell : UITableViewCell
 
@@ -15,4 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *reviewTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *reviewImageView;
 
+-(void)configureUserLabelwithReview:(NMReview *)review;
+-(void)configureUserImagewithReview:(NMReview *)review;
+-(void)configureRatingImagewithReview:(NMReview *)review;
+-(void)configureExcerptwithReview:(NMReview *)review;
 @end
